@@ -1,0 +1,73 @@
+body {
+  margin:0;
+  font-family:Poppins, sans-serif;
+  background:#f4efe8;
+  color:#333;
+}
+
+header {
+  background:#2f6b3f;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+nav a {
+  color:white;
+  margin:0 12px;
+  text-decoration:none;
+  font-weight:500;
+}
+
+section {
+  padding:60px 20px;
+  max-width:1000px;
+  margin:auto;
+}
+
+h2 {
+  color:#2f6b3f;
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.card {
+  background:white;
+  padding:25px;
+  border-radius:14px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  margin-bottom:25px;
+}
+
+footer {
+  background:#2f6b3f;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+form input, form textarea, form button {
+  width:100%;
+  padding:14px;
+  margin-bottom:15px;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+
+form button {
+  background:#2f6b3f;
+  color:white;
+  font-weight:600;
+  border:none;
+}
+
+.whatsapp {
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:#25d366;
+  color:white;
+  padding:14px 22px;
+  border-radius:50px;
+  text-decoration:none;
+}
