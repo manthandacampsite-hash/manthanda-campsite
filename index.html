@@ -5,174 +5,169 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Manthanda Campsite</title>
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      background: #f6f1e7;
-      color: #1f3d2b;
-      line-height: 1.6;
+      background: #f5f1e9;
+      color: #222;
     }
 
     /* NAVIGATION */
     nav {
       position: sticky;
       top: 0;
-      background: #1f3d2b;
-      padding: 14px;
-      display: flex;
-      justify-content: center;
-      gap: 22px;
       z-index: 1000;
+      background: rgba(0, 0, 0, 0.75);
+      padding: 12px 20px;
+      text-align: center;
     }
 
     nav a {
-      color: #ffffff;
+      color: #fff;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
+      margin: 0 12px;
+      font-weight: 500;
+      font-size: 14px;
     }
 
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* GENERAL SECTION */
     section {
-      scroll-margin-top: 80px;
-      padding: 70px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    /* HERO */
-    .hero {
-      height: 85vh;
-      background: linear-gradient(
-          rgba(0, 0, 0, 0.45),
-          rgba(0, 0, 0, 0.45)
-        ),
-        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee")
-          center/cover no-repeat;
+      min-height: 100vh;
+      padding: 80px 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: #ffffff;
     }
 
-    .hero h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
+    .overlay {
+      background: rgba(0, 0, 0, 0.55);
+      padding: 60px 20px;
+      width: 100%;
     }
 
-    .hero p {
-      font-size: 1.1rem;
+    h1, h2 {
+      color: #fff;
       margin-bottom: 20px;
     }
 
-    .hero a {
-      background: #ffffff;
-      color: #1f3d2b;
-      padding: 12px 28px;
-      border-radius: 30px;
+    p {
+      color: #f1f1f1;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    /* HERO */
+    #home {
+      background: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470")
+        center / cover no-repeat;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 26px;
+      background: #2ecc71;
+      color: #000;
       text-decoration: none;
       font-weight: 600;
+      border-radius: 25px;
     }
 
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 2rem;
+    /* OUR STORY */
+    #story {
+      background: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee")
+        center / cover no-repeat;
     }
 
-    /* STORY */
-    .story {
-      background: #ffffff;
-      border-radius: 14px;
-      padding: 30px;
-      text-align: center;
-    }
-
-    .story img {
+    .avatar {
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      margin-bottom: 15px;
-      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid #fff;
     }
 
     /* GALLERY */
+    #gallery {
+      background: url("https://images.unsplash.com/photo-150 camping night")
+        center / cover no-repeat;
+    }
+
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 12px;
+      margin-top: 30px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .gallery img {
       width: 100%;
-      height: 160px;
-      object-fit: cover;
       border-radius: 12px;
     }
 
     /* BOOKING */
-    .booking {
-      background: #ffffff;
-      border-radius: 14px;
-      padding: 30px;
-      text-align: center;
+    #booking {
+      background: url("https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9")
+        center / cover no-repeat;
     }
 
-    .booking a {
+    .booking-btn {
       display: inline-block;
       margin-top: 20px;
+      padding: 14px 30px;
       background: #25d366;
-      color: #ffffff;
-      padding: 14px 28px;
-      border-radius: 30px;
+      color: #000;
       text-decoration: none;
       font-weight: 600;
+      border-radius: 30px;
     }
 
     /* REVIEWS */
+    #reviews {
+      background: url("https://images.unsplash.com/photo-1500534314209-a25ddb2bd429")
+        center / cover no-repeat;
+    }
+
     .review {
-      background: #ffffff;
-      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.15);
       padding: 20px;
-      margin-bottom: 15px;
-    }
-
-    /* MAP */
-    iframe {
-      width: 100%;
-      height: 350px;
-      border: 0;
-      border-radius: 14px;
-    }
-
-    /* WHATSAPP FLOAT */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: #ffffff;
-      padding: 14px 18px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      z-index: 2000;
+      border-radius: 12px;
+      margin: 12px auto;
+      max-width: 600px;
+      color: #fff;
     }
 
     /* MOBILE */
     @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2.2rem;
+      nav a {
+        margin: 0 6px;
+        font-size: 13px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -183,78 +178,70 @@
   <!-- NAV -->
   <nav>
     <a href="#home">Home</a>
-    <a href="#about">About</a>
+    <a href="#story">About</a>
     <a href="#gallery">Gallery</a>
     <a href="#booking">Booking</a>
-    <a href="#location">Location</a>
+    <a href="#reviews">Reviews</a>
   </nav>
 
   <!-- HERO -->
-  <section id="home" class="hero">
-    <div>
+  <section id="home">
+    <div class="overlay">
       <h1>Manthanda Campsite</h1>
       <p>Disconnect from the city. Reconnect with nature.</p>
-      <a href="#booking">Book Your Stay</a>
+      <a class="hero-btn" href="#booking">Book Now</a>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>Our Story</h2>
-    <div class="story">
-      <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d" alt="Owner">
+  <!-- STORY -->
+  <section id="story">
+    <div class="overlay">
+      <img src="https://i.pravatar.cc/300" class="avatar" alt="Owner" />
+      <h2>Our Story</h2>
       <p>
-        Manthanda Campsite was created to offer a peaceful escape into nature.
-        Surrounded by greenery, silence, and open skies, this campsite is built
-        for people who want to slow down and breathe.
+        Manthanda Campsite was created to give people a peaceful escape into nature.
+        Campfires, starry skies, and unforgettable memories await you.
       </p>
     </div>
   </section>
 
   <!-- GALLERY -->
   <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
-      <img src="https://images.unsplash.com/photo-1500534314209-a26db0f5d57d">
-      <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7">
+    <div class="overlay">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="https://source.unsplash.com/300x300/?campfire" />
+        <img src="https://source.unsplash.com/300x300/?tent" />
+        <img src="https://source.unsplash.com/300x300/?forest" />
+        <img src="https://source.unsplash.com/300x300/?mountains" />
+      </div>
     </div>
   </section>
 
   <!-- BOOKING -->
   <section id="booking">
-    <h2>Booking</h2>
-    <div class="booking">
-      <p>To book your stay, contact us directly on WhatsApp.</p>
-      <a href="https://wa.me/9482236703?text=Hello%20Manthanda%20Campsite%2C%20I%20would%20like%20to%20book%20a%20stay." target="_blank">
-        Book via WhatsApp
+    <div class="overlay">
+      <h2>Booking</h2>
+      <p>Message us directly on WhatsApp to check availability and pricing.</p>
+      <a
+        class="booking-btn"
+        href="https://wa.me/919999999999?text=Hello%20Manthanda%20Campsite,%20I%20would%20like%20to%20book%20a%20stay."
+        target="_blank"
+      >
+        Book on WhatsApp
       </a>
     </div>
   </section>
 
   <!-- REVIEWS -->
   <section id="reviews">
-    <h2>Guest Reviews</h2>
-    <div class="review">“Peaceful place and amazing experience.”</div>
-    <div class="review">“Perfect getaway from city life.”</div>
+    <div class="overlay">
+      <h2>Guest Reviews</h2>
+      <div class="review">⭐️⭐️⭐️⭐️⭐️ “Amazing experience and peaceful location.”</div>
+      <div class="review">⭐️⭐️⭐️⭐️⭐️ “Perfect weekend getaway with friends.”</div>
+      <div class="review">⭐️⭐️⭐️⭐️⭐️ “Highly recommended for nature lovers.”</div>
+    </div>
   </section>
-
-  <!-- LOCATION -->
-  <section id="location">
-    <h2>Location</h2>
-    <iframe
-      src="https://www.google.com/maps?q=Manthanda%20Campsite&output=embed">
-    </iframe>
-  </section>
-
-  <!-- WHATSAPP FLOAT -->
-  <a
-    class="whatsapp-float"
-    href="https://wa.me/919999999999?text=Hello%20Manthanda%20Campsite%2C%20I%20have%20a%20query."
-    target="_blank">
-    WhatsApp
-  </a>
 
 </body>
 </html>
