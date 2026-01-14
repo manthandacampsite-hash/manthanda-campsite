@@ -1,105 +1,260 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Manthanda Campsite</title>
-<link rel="stylesheet" href="assets/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manthanda Campsite</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f6f1e7;
+      color: #1f3d2b;
+      line-height: 1.6;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #1f3d2b;
+      padding: 14px;
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    section {
+      scroll-margin-top: 80px;
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* HERO */
+    .hero {
+      height: 85vh;
+      background: linear-gradient(
+          rgba(0, 0, 0, 0.45),
+          rgba(0, 0, 0, 0.45)
+        ),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee")
+          center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .hero a {
+      background: #ffffff;
+      color: #1f3d2b;
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    /* STORY */
+    .story {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .story img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* BOOKING */
+    .booking {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .booking a {
+      display: inline-block;
+      margin-top: 20px;
+      background: #25d366;
+      color: #ffffff;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* REVIEWS */
+    .review {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+
+    /* MAP */
+    iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      border-radius: 14px;
+    }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: #ffffff;
+      padding: 14px 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      z-index: 2000;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
+  <!-- NAV -->
   <nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#booking">Booking</a>
-  <a href="#location">Location</a>
-</nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#booking">Booking</a>
+    <a href="#location">Location</a>
+  </nav>
 
-  <section id="home">
-  <header class="hero">
-    <div class="hero-overlay">
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div>
       <h1>Manthanda Campsite</h1>
-      <p>Reconnect with nature</p>
-      <a href="#booking" class="hero-btn">Book Now</a>
+      <p>Disconnect from the city. Reconnect with nature.</p>
+      <a href="#booking">Book Your Stay</a>
     </div>
-  </header>
-</section>
+  </section>
 
-
-
-<header class="hero">
-  <div class="hero-overlay">
-    <h1>Manthanda Campsite</h1>
-    <p>Disconnect from the city. Reconnect with nature.</p>
-    <a href="booking.html" class="hero-btn">Book Your Stay</a>
-  </div>
-</header>
-
+  <!-- ABOUT -->
   <section id="about">
-  <h2>About Us</h2>
-  <div class="card">
-    <img
-      src="https://i.pravatar.cc/150"
-      style="border-radius:50%; display:block; margin:auto;"
-    />
-    <p>
-      Manthanda Campsite offers a peaceful outdoor experience surrounded by
-      nature, safety, and comfort.
-    </p>
-  </div>
-</section>
-<section id="gallery">
-  <h2>Gallery</h2>
-  <div class="insta-grid">
-    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" />
-    <img src="https://images.unsplash.com/photo-1519817650390-64a93db511aa" />
-    <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4" />
-  </div>
-</section>
-<section id="booking">
-  <h2>Book Your Stay</h2>
-  <form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
-    <input type="text" name="name" placeholder="Name" required />
-    <input type="tel" name="phone" placeholder="Phone" required />
-    <input type="date" name="date" required />
-    <button type="submit">Submit</button>
-  </form>
-</section>
-<section id="location">
-  <h2>Location</h2>
-  <iframe
-    src="https://www.google.com/maps?q=Manthanda+Campsite&output=embed"
-    width="100%"
-    height="300"
-    style="border:0;"
-  ></iframe>
-</section>
+    <h2>Our Story</h2>
+    <div class="story">
+      <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d" alt="Owner">
+      <p>
+        Manthanda Campsite was created to offer a peaceful escape into nature.
+        Surrounded by greenery, silence, and open skies, this campsite is built
+        for people who want to slow down and breathe.
+      </p>
+    </div>
+  </section>
 
+  <!-- GALLERY -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+      <img src="https://images.unsplash.com/photo-1500534314209-a26db0f5d57d">
+      <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7">
+    </div>
+  </section>
 
+  <!-- BOOKING -->
+  <section id="booking">
+    <h2>Booking</h2>
+    <div class="booking">
+      <p>To book your stay, contact us directly on WhatsApp.</p>
+      <a href="https://wa.me/919999999999?text=Hello%20Manthanda%20Campsite%2C%20I%20would%20like%20to%20book%20a%20stay." target="_blank">
+        Book via WhatsApp
+      </a>
+    </div>
+  </section>
 
-<section>
-  <h2>Our Story</h2>
-  <div class="card" style="text-align:center;">
-    <img
-      src="https://i.pravatar.cc/150?img=12"
-      alt="Owner"
-      style="border-radius:50%; margin-bottom:15px;"
-    />
-    <h3>Founded by Nature Lovers</h3>
-    <p>
-      Manthanda Campsite was created with a simple vision — to offer a peaceful,
-      authentic outdoor experience away from city noise. We focus on safety,
-      comfort, and preserving nature while giving guests unforgettable memories.
-    </p>
-  </div>
-</section>
-  
-  
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <h2>Guest Reviews</h2>
+    <div class="review">“Peaceful place and amazing experience.”</div>
+    <div class="review">“Perfect getaway from city life.”</div>
+  </section>
 
+  <!-- LOCATION -->
+  <section id="location">
+    <h2>Location</h2>
+    <iframe
+      src="https://www.google.com/maps?q=Manthanda%20Campsite&output=embed">
+    </iframe>
+  </section>
 
+  <!-- WHATSAPP FLOAT -->
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/919999999999?text=Hello%20Manthanda%20Campsite%2C%20I%20have%20a%20query."
+    target="_blank">
+    WhatsApp
+  </a>
 
-<footer>© 2026 Manthanda Campsite</footer>
-
-<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp</a>
 </body>
 </html>
